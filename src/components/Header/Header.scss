@@ -1,0 +1,80 @@
+@import "../../assets/theme/clr_var.scss";
+
+// #walletconnect-qrcode-text,
+// .walletconnect-connect__button__icon_anchor {
+//   display: none !important;
+// }
+.header_style {
+  display: flex;
+  height: 94px;
+  background: $baseColor;
+  align-items: center;
+  padding-left: 27px;
+  padding-right: 27px;
+  justify-content: space-between;
+  z-index: 3;
+  position: sticky;
+  top: 0;
+  transition: all 0.25s;
+  @media (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 72px;
+  }
+  &.isFixed {
+    top: -100px;
+  }
+
+  .header_left_style {
+    display: flex;
+    align-items: center;
+    .for_desktop,
+    .for_mobile {
+      position: relative;
+      top: -3px;
+      img {
+        width: 35px;
+        cursor: pointer;
+      }
+    }
+    .header_logo {
+      width: 143px;
+      height: 46px;
+      background: url("../../assets/images/SaitaSwap_logo_purple.png") no-repeat;
+      display: flex;
+      font-family: $baseFont;
+      margin-left: 14px;
+      display: inline-block;
+      transition: all 0.25s;
+      @media (max-width: 991px) {
+        // background: url("../../assets/images/Saita-Token.svg") no-repeat;
+        width: 140px;
+        height: 46px;
+        background-size: 143px;
+      }
+    }
+    .for_mobile {
+      display: none;
+    }
+    @media (max-width: 960px) {
+      .for_desktop {
+        display: none;
+      }
+      .for_mobile {
+        display: block;
+        margin: 9px 0 0;
+      }
+    }
+  }
+  .header_right_style {
+    text-align: right;
+
+    a.connect__Link {
+      min-width: 158px;
+      text-align: center;
+      transition: all 0.25s;
+      @media (max-width: 960px) {
+      }
+    }
+  }
+}
