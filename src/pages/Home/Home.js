@@ -6,7 +6,6 @@ import Web3 from "web3";
 import { Link } from "react-router-dom";
 import { rootName } from "../../constant";
 import Button from "../../components/Button/Button";
-import FarmCard from "../../components/FarmCard/FarmCard";
 import SAITA from "../../assets/images/saitaswap.png";
 import BUSD from "../../assets/images/token_icons/BUSD-Token.svg";
 import ANCHOR from "../../assets/images/token_icons/ANCHOR-Token.svg";
@@ -15,7 +14,6 @@ import { ContractServices } from "../../services/ContractServices";
 import { ExchangeService } from "../../services/ExchangeService";
 import { FarmService } from "../../services/FarmService";
 import { ReferralsServices } from "../../services/ReferralsServices";
-import Statement from "../../assets/Pdfs/Statement.pdf";
 import {
   MAIN_CONTRACT_LIST,
   BURN_ADDRESS,
@@ -795,36 +793,7 @@ const Home = () => {
             </div>
           </Col>
 
-          {topFarms
-            .sort(function (a, b) {
-              let keyA = a.newApr,
-                keyB = b.newApr;
-              // Compare the 2 farms
-              if (keyA < keyB) return 1;
-              if (keyA > keyB) return -1;
-              return 0;
-            })
-            .filter((farm, index) => index < 3)
-            .map((topFarm, index) => (
-              <Col xl={4} lg={12}>
-                <FarmCard
-                  title={topFarm.symbol0}
-                  title1={topFarm.symbol1}
-                  icon1={
-                    handleIcon(topFarm?.symbol0)
-                      ? handleIcon(topFarm?.symbol0)
-                      : ""
-                  }
-                  icon2={
-                    handleIcon(topFarm?.symbol1)
-                      ? handleIcon(topFarm?.symbol1)
-                      : ""
-                  }
-                  liquidity={`$${topFarm.newLiquidity} `}
-                  apy={`${topFarm.newApr != "NaN" ? topFarm.newApr : "0"} %`}
-                />
-              </Col>
-            ))}
+        
         </Row>
       </div>
     </div>

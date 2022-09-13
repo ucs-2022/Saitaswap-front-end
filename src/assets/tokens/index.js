@@ -24,9 +24,6 @@ import SaitaRealty from "../../assets/images/token_icons/saitamaIcons/SaitaRealt
 import Kodachi from "../../assets/images/token_icons/saitamaIcons/Kodachi1.png";
 import factoryABI from "../ABI/factory.ABI.json";
 import pairABI from "../ABI/pair.ABI.json";
-import farmABI from "../ABI/farmABI.json";
-import anchorABI from "../ABI/anchor.ABI.json";
-import referralsABI from "../ABI/referrals.ABI.json";
 import shaman from "../images/token_icons/saitamaIcons/shaman.png";
 export const BURN_ADDRESS = "0x000000000000000000000000000000000000dEaD";
 export const DEFLATIONNARY_TOKENS = [
@@ -293,22 +290,7 @@ export const MAIN_CONTRACT_LIST = {
     address: "",
     blockNumber: 0,
     abi: pairABI,
-  },
-  farm: {
-    address: "0xD2aC89e85Dd0c7c4ef62E5448F6eD8c1d98547F4",
-    blockNumber: 10889234,
-    abi: farmABI,
-  },
-  anchorNew: {
-    address: "0x5ac5e6Af46Ef285B3536833E65D245c49b608d9b",
-    blockNumber: 10350461,
-    abi: anchorABI,
-  },
-  referrals: {
-    address: "0xe25e719d59574E5eA1F681e49da5207bc56916fB",
-    blockNumber: 10004593,
-    abi: referralsABI,
-  },
+  }
 };
 
 // ******** BSC_TEST_NET Token List **********
@@ -386,22 +368,7 @@ export const MAIN_CONTRACT_LIST = {
 //     address: "",
 //     blockNumber: 0,
 //     abi: pairABI,
-//   },
-//   farm: {
-//     address: "0xD6813A8809aD40e6d7Bd1540D454b126F10CBcEA",
-//     blockNumber: 10004492,
-//     abi: farmABI,
-//   },
-//   anchorNew: {
-//     address: "0xe121335A886FA620671D0d2a946139Fa5B265AB0",
-//     blockNumber: 10350461,
-//     abi: anchorABI,
-//   },
-//   referrals: {
-//     address: "0xF28b3D49Fd5d0B3DF81B9d3E559092CAeF512f9A",
-//     blockNumber: 10004593,
-//     abi: referralsABI,
-//   },
+//   }
 // };
 
 // ******* Extra tokens just for icons *********
