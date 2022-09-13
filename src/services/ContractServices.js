@@ -30,12 +30,12 @@ let walletConnectProvider;
 // }
 
 const callWeb3ForWalletConnect = async (provider) => {
-  // alert("in waaa");
+  // alert("in waaa");  /
   provider = new WalletConnectProvider({
     rpc: {
       // 97: "https://data-seed-prebsc-2-s3.binance.org:8545/",
       // 56: "https://bsc-dataseed.binance.org/",
-      1: "https://eth.getblock.io/dedicated/mainnet/1cd01716-7d96-44f5-9a90-7416a4ac657b/",
+      // 1: "https://eth.getblock.io/dedicated/mainnet/1cd01716-7d96-44f5-9a90-7416a4ac657b/",
     },
     // chainId: 1,
     // network: "mainnet",
